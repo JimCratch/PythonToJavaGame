@@ -1,8 +1,9 @@
 import java.util.Scanner;
+import GUI.GameMenu;
 import Game.*;
-import CoolDowns.StrengthPotion;
 import Fight.FirstFight;
 import Game.MobStats.BanditStats;
+import javax.swing.*;
 
 public class Main {
 
@@ -30,25 +31,18 @@ public class Main {
 
         System.out.println("Strength: " + Stats.get(0) + "\nAgility: " + Stats.get(1) + "\nDexterity: " + Stats.get(2) + "\nHealth: " + Stats.get(3) + "\nRemaining Points: " + Stats.get(4));
 
-        int potionDurationInSeconds = 11; // Example: 60 seconds duration
+        int potionDurationInSeconds = 11;
         StrengthPotion potionTimer = new StrengthPotion(potionDurationInSeconds);
 
-        // Start the potion timer in a separate thread
         potionTimer.startTimer();
 
-        // Continue executing your game logic here
-
         */
+        GameMenu gamemenu = new GameMenu();
+        JOptionPane.showMessageDialog(null,"Minimize this window (cannot be reopened)");
+        Thread.sleep(2000);
         GameStart();
-        while (true) {
-            try {
-                // Simulating game activities for a short interval
-                Thread.sleep(1000);
-            } catch (InterruptedException ex) {
-                ex.printStackTrace();
-            }
-        }
-        //GameStart();
+
+
     }
 
     private static void GameStart() throws InterruptedException {
