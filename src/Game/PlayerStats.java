@@ -8,7 +8,7 @@ public class PlayerStats {
     public static int Agility = 10;
     public static int Dexterity = 10;
     public static int Health = 100;
-    public static int Remaining_Points = 15;
+    public static int Remaining_Points = 0;
     public static ArrayList<Integer> Stats = new ArrayList<>();
 
     public static void PlayerCreationArrayStats() {
@@ -45,5 +45,11 @@ public class PlayerStats {
             default:
                 break;
         }
+    }
+
+    public static void TookDamage(int newValue) {
+        Health = newValue;
+        Stats.set(3, Health);
+
     }
 }

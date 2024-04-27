@@ -1,3 +1,5 @@
+package PlayStart;
+
 import java.util.Scanner;
 import GUI.GameMenu;
 import Game.*;
@@ -5,9 +7,9 @@ import Fight.FirstFight;
 import Game.MobStats.BanditStats;
 import javax.swing.*;
 
-public class Main {
+public class PlayGame {
 
-    static Scanner scanner = new Scanner(System.in);
+    public static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws InterruptedException {
         PlayerStats.PlayerCreationArrayStats();
